@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>L'Arrière Cour, restaurant corse à Saint-Florent</title>
+  <meta name="description" content="Restaurant corse caché dans la vieille ville de Saint-Florent. Une cour ombragée sous un platane centenaire, cuisine maison généreuse, 4,4 sur 1 368 avis."/>
+  <meta name="theme-color" content="#F6EFE2"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#F6EFE2',
+            ink: '#1F2117',
+            'ink-2': '#5B5345',
+            accent: '#B8532A',
+            line: '#3A5A3A',
+          },
+          fontFamily: {
+            display: ['"Libre Caslon Text"', 'Georgia', 'serif'],
+            sans: ['"Work Sans"', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --bg:#F6EFE2;
+      --ink:#1F2117;
+      --ink-2:#5B5345;
+      --accent:#B8532A;
+      --line:#3A5A3A;
+    }
+    html, body { background: var(--bg); color: var(--ink); }
+    body { font-family: 'Work Sans', system-ui, sans-serif; font-size: 1.05rem; line-height: 1.7; letter-spacing: 0; }
+    .font-display { font-family: 'Libre Caslon Text', Georgia, serif; letter-spacing: -0.015em; }
+
+    .eyebrow { font-family: 'Work Sans', sans-serif; font-weight: 500; font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-2); }
+
+    .h1 { font-family: 'Libre Caslon Text', Georgia, serif; font-weight: 400; font-size: clamp(2.6rem, 7.5vw, 5.2rem); line-height: 1.04; letter-spacing: -0.02em; }
+    .h2 { font-family: 'Libre Caslon Text', Georgia, serif; font-weight: 400; font-size: clamp(1.9rem, 4.2vw, 3rem); line-height: 1.1; letter-spacing: -0.015em; }
+    .h3 { font-family: 'Libre Caslon Text', Georgia, serif; font-weight: 700; font-size: clamp(1.3rem, 2.2vw, 1.6rem); line-height: 1.2; }
+
+    .marquee-track { display: flex; gap: 3.5rem; white-space: nowrap; animation: marquee 40s linear infinite; will-change: transform; }
+    .marquee-wrap:hover .marquee-track { animation-play-state: paused; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    [data-reveal] { opacity: 0; transform: translateY(24px); }
+
+    .btn-primary { background: var(--accent); color: var(--bg); transition: background 200ms ease, transform 200ms ease; }
+    .btn-primary:hover { background: var(--ink); }
+    .btn-ghost { border: 1px solid var(--ink); color: var(--ink); transition: background 200ms ease, color 200ms ease; }
+    .btn-ghost:hover { background: var(--ink); color: var(--bg); }
+
+    .card-signature { transition: transform 220ms ease-out, box-shadow 220ms ease-out; }
+    .card-signature:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -20px rgba(31,33,23,0.22); }
+    .card-signature .underline-accent { display: inline-block; background-image: linear-gradient(to right, var(--accent), var(--accent)); background-repeat: no-repeat; background-size: 0% 1px; background-position: 0 100%; transition: background-size 280ms ease; padding-bottom: 2px; }
+    .card-signature:hover .underline-accent { background-size: 100% 1px; }
+
+    .gallery-img { transition: transform 400ms ease-out; }
+    .gallery-item:hover .gallery-img { transform: scale(1.03); }
+
+    .hairline { border: 1px solid var(--line); }
+
+    .histoire-img-clip { clip-path: inset(100% 0 0 0); transition: clip-path 1.2s cubic-bezier(0.16, 0.84, 0.44, 1); }
+    .histoire-img-clip.is-visible { clip-path: inset(0 0 0 0); }
+
+    .leaf { display: inline-block; width: 1.1rem; height: 1.1rem; vertical-align: middle; color: var(--accent); }
+
+    .nav-blur { background: rgba(246,239,226,0.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+
+    a { color: inherit; }
+    a.accent-link { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    a.accent-link:hover { text-decoration-thickness: 2px; }
+
+    ::selection { background: var(--accent); color: var(--bg); }
+
+    .rule { height: 1px; background: var(--line); opacity: 0.5; }
+
+    .proof-number { font-family: 'Libre Caslon Text', Georgia, serif; font-weight: 400; color: var(--accent); font-size: clamp(5rem, 14vw, 9rem); line-height: 0.9; letter-spacing: -0.03em; }
+
+    .footer-mark { font-family: 'Libre Caslon Text', Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(4rem, 12vw, 9rem); line-height: 0.9; letter-spacing: -0.02em; opacity: 0.92; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation: none; }
+      [data-reveal] { opacity: 1; transform: none; }
+      .histoire-img-clip { clip-path: inset(0 0 0 0); transition: none; }
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- NAV -->
+  <nav class="nav-blur fixed top-0 left-0 right-0 z-50 border-b border-line/20">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-[72px] flex items-center justify-between">
+      <a href="#hero" class="font-display italic text-2xl sm:text-[1.7rem] text-ink leading-none">L'Arrière Cour</a>
+      <ul class="hidden md:flex items-center gap-8 text-[0.92rem] text-ink">
+        <li><a href="#histoire" class="hover:text-accent transition-colors">La cour</a></li>
+        <li><a href="#signature" class="hover:text-accent transition-colors">La carte</a></li>
+        <li><a href="#galerie" class="hover:text-accent transition-colors">Galerie</a></li>
+        <li><a href="#infos" class="hover:text-accent transition-colors">Infos</a></li>
+      </ul>
+      <a href="tel:+33495353362" class="btn-ghost inline-flex items-center gap-2 px-4 py-2 rounded-[4px] text-sm font-medium">
+        <span>Réserver</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="pt-[72px]">
+
+    <!-- HERO -->
+    <section id="hero" class="relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 pt-10 sm:pt-16 pb-14 sm:pb-24">
+        <div class="grid lg:grid-cols-[55%_45%] gap-10 lg:gap-14 items-center">
+
+          <div class="order-2 lg:order-1">
+            <p class="eyebrow" data-reveal>Restaurant corse &middot; Saint-Florent</p>
+            <h1 class="h1 mt-5" data-reveal>
+              Une cour cachée,<br/>
+              sous le <span class="italic">platane centenaire</span>.
+            </h1>
+            <p class="mt-6 max-w-xl text-ink-2" data-reveal>
+              Poussez la ruelle, et tout change. Au cœur de la vieille ville de Saint-Florent, L'Arrière Cour vous accueille dans un jardin secret de pierres et de verdure, autour d'une cuisine corse généreuse, à la fois maison et sans chichis.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-3" data-reveal>
+              <a href="tel:+33495353362" class="btn-primary inline-flex items-center gap-2 px-6 py-3.5 rounded-[4px] font-medium">
+                Réserver au 04 95 35 33 62
+              </a>
+              <a href="#histoire" class="btn-ghost inline-flex items-center gap-2 px-6 py-3.5 rounded-[4px] font-medium">
+                Découvrir la cour
+              </a>
+            </div>
+
+            <div class="mt-10 flex items-center gap-6 text-sm text-ink-2" data-reveal>
+              <div class="flex items-center gap-2">
+                <svg class="leaf" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.39 4.84L20 8l-4 3.9.94 5.48L12 14.77 7.06 17.4 8 11.9 4 8l5.61-1.16z"/></svg>
+                <span><strong class="text-ink font-semibold">4,4</strong> sur 1 368 avis Google</span>
+              </div>
+              <div class="hidden sm:flex items-center gap-2">
+                <span class="w-1 h-1 rounded-full bg-line"></span>
+                <span>Ouvert 7j/7, midi et soir</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2">
+            <div class="relative overflow-hidden rounded-[4px] hairline" style="aspect-ratio: 4/5;">
+              <img id="hero-image"
+                   src="./assets/images/hero-arriere-cour.jpg"
+                   alt="L'Arrière Cour, vue de la cour ombragée sous le platane"
+                   class="w-full h-full object-cover"
+                   loading="eager" fetchpriority="high"/>
+            </div>
+            <p class="mt-3 text-xs text-ink-2 italic">La cour, à l'heure bleue.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section id="marquee" class="marquee-wrap bg-ink text-bg py-4 overflow-hidden select-none" aria-hidden="true">
+      <div class="marquee-track font-display text-2xl sm:text-3xl">
+        <!-- set 1 -->
+        <span class="flex items-center gap-14">
+          <span>Cuisine corse maison</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+          <span>Brocciu</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+          <span>Ravioli</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+          <span>Fiadone</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+          <span>Platane centenaire</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+          <span>Cour cachée</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+          <span>Saint-Florent</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+          <span>Depuis toujours</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+          <span>4,4 étoiles Google</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+        </span>
+        <!-- set 2 duplicate -->
+        <span class="flex items-center gap-14">
+          <span>Cuisine corse maison</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+          <span>Brocciu</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+          <span>Ravioli</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+          <span>Fiadone</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+          <span>Platane centenaire</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+          <span>Cour cachée</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+          <span>Saint-Florent</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+          <span>Depuis toujours</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+          <span>4,4 étoiles Google</span>
+          <svg class="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 6 6 10 6 14a6 6 0 0012 0c0-4-2-8-6-12z"/></svg>
+        </span>
+      </div>
+    </section>
+
+    <!-- HISTOIRE -->
+    <section id="histoire" class="py-20 sm:py-28">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="grid lg:grid-cols-[60%_40%] gap-10 lg:gap-16 items-start">
+
+          <div>
+            <p class="eyebrow" data-reveal>La découverte</p>
+            <h2 class="h2 mt-4" data-reveal>La cour, le platane, <span class="italic">le secret</span>.</h2>
+
+            <div class="mt-8 space-y-5 text-ink-2 max-w-xl">
+              <p data-reveal>
+                On longe les façades tièdes de la vieille ville, une ruelle s'ouvre, et voilà la porte, presque timide. Derrière, la cour respire : pierres pâles, tables dressées, odeur de basilic. Au centre, un platane centenaire étend son feuillage comme une toile vivante, et la lumière se fait plus douce, plus sucrée.
+              </p>
+              <p data-reveal>
+                Ici, on vient partager une cuisine corse sans détour : des assiettes honnêtes, généreuses, qui racontent l'île. L'accueil est simple et chaleureux, le service va à l'essentiel. On reste plus longtemps que prévu, on commande un dernier café, on regarde la nuit tomber sur la verdure. C'est cela, l'Arrière Cour.
+              </p>
+            </div>
+
+            <div class="mt-10 flex flex-wrap items-center gap-4 text-sm" data-reveal>
+              <a href="#signature" class="accent-link">Voir la carte maison</a>
+              <span class="w-1 h-1 rounded-full bg-line"></span>
+              <a href="#infos" class="accent-link">Horaires et accès</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="relative overflow-hidden rounded-[4px] hairline histoire-img-clip" style="aspect-ratio: 3/4;" id="histoire-image">
+              <img src="./assets/images/terrasse-cour-tripadvisor.jpg"
+                   alt="Cour cachée du restaurant, tables dressées sous la verdure"
+                   class="w-full h-full object-cover"
+                   loading="lazy"/>
+            </div>
+            <p class="mt-3 text-xs text-ink-2 italic">L'été, la cour se remplit doucement à la tombée du jour.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE -->
+    <section id="signature" class="py-20 sm:py-28 border-t border-b border-line/25">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+        <div class="max-w-3xl">
+          <p class="eyebrow" data-reveal>Spécialités maison</p>
+          <h2 class="h2 mt-4" data-reveal>La carte, <span class="italic">faite maison</span>.</h2>
+          <p class="mt-5 text-ink-2" data-reveal>
+            Quelques plats traversent les saisons, on les prépare comme à la maison. Trois signatures à goûter, au moins une fois, sous le platane.
+          </p>
+        </div>
+
+        <div class="mt-14 grid md:grid-cols-3 gap-6 lg:gap-8">
+
+          <article class="card-signature bg-bg rounded-[4px] overflow-hidden hairline" data-reveal>
+            <div class="relative overflow-hidden" style="aspect-ratio: 1/1;">
+              <img src="./assets/images/plats-arriere-cour-1.jpg"
+                   alt="Ravioli au brocciu, spécialité corse de L'Arrière Cour"
+                   class="w-full h-full object-cover gallery-img"
+                   loading="lazy"/>
+            </div>
+            <div class="p-6">
+              <h3 class="h3"><span class="underline-accent">Ravioli au brocciu</span></h3>
+              <p class="mt-3 text-ink-2 text-[0.98rem]">
+                Pâte fraîche, brocciu crémeux, une pointe de menthe. Un classique de l'île que l'on fait rouler à la main, servi avec un filet d'huile.
+              </p>
+              <div class="mt-5 flex items-center gap-2 text-ink-2">
+                <svg class="leaf" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 4c-5 0-9 4-9 9 0 1 .2 2 .5 3L4 20l1-4.5c1 .3 2 .5 3 .5 5 0 9-4 9-9z"/></svg>
+                <span class="text-xs tracking-wide">Signature corse</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card-signature bg-bg rounded-[4px] overflow-hidden hairline" data-reveal>
+            <div class="relative overflow-hidden" style="aspect-ratio: 1/1;">
+              <img src="./assets/images/repas-arriere-cour.jpg"
+                   alt="Fiadone maison, dessert traditionnel corse au brocciu"
+                   class="w-full h-full object-cover gallery-img"
+                   loading="lazy"/>
+            </div>
+            <div class="p-6">
+              <h3 class="h3"><span class="underline-accent">Fiadone</span></h3>
+              <p class="mt-3 text-ink-2 text-[0.98rem]">
+                Le gâteau corse par excellence : brocciu, œufs, zeste de citron, parfum d'eau-de-vie. Moelleux dedans, légèrement doré dessus.
+              </p>
+              <div class="mt-5 flex items-center gap-2 text-ink-2">
+                <svg class="leaf" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 4c-5 0-9 4-9 9 0 1 .2 2 .5 3L4 20l1-4.5c1 .3 2 .5 3 .5 5 0 9-4 9-9z"/></svg>
+                <span class="text-xs tracking-wide">Dessert maison</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card-signature bg-bg rounded-[4px] overflow-hidden hairline" data-reveal>
+            <div class="relative overflow-hidden" style="aspect-ratio: 1/1;">
+              <img src="./assets/images/plats-arriere-cour-2.jpg"
+                   alt="Crêpes sarrasin, spécialité gourmande de la carte"
+                   class="w-full h-full object-cover gallery-img"
+                   loading="lazy"/>
+            </div>
+            <div class="p-6">
+              <h3 class="h3"><span class="underline-accent">Crêpes sarrasin</span></h3>
+              <p class="mt-3 text-ink-2 text-[0.98rem]">
+                Sarrasin ou froment, garnitures salées ou sucrées. Portion généreuse, à déguster à l'ombre du platane, comme au coin d'un feu.
+              </p>
+              <div class="mt-5 flex items-center gap-2 text-ink-2">
+                <svg class="leaf" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 4c-5 0-9 4-9 9 0 1 .2 2 .5 3L4 20l1-4.5c1 .3 2 .5 3 .5 5 0 9-4 9-9z"/></svg>
+                <span class="text-xs tracking-wide">À partager</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIE -->
+    <section id="galerie" class="py-20 sm:py-28">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
+          <div>
+            <p class="eyebrow" data-reveal>En images</p>
+            <h2 class="h2 mt-4" data-reveal>Un carnet d'été <span class="italic">à Saint-Florent</span>.</h2>
+          </div>
+          <p class="max-w-sm text-ink-2" data-reveal>
+            Quelques instants volés à la cour : lumière de midi, tables qui se remplissent, pierres qui gardent la chaleur du jour.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+
+          <figure class="gallery-item relative overflow-hidden rounded-[4px] hairline" style="aspect-ratio: 3/4;" data-reveal>
+            <img src="./assets/images/cour-arriere-cour-tripadvisor.jpg"
+                 alt="Cour extérieure : pierres apparentes et végétation"
+                 class="w-full h-full object-cover gallery-img" loading="lazy"/>
+          </figure>
+
+          <figure class="gallery-item relative overflow-hidden rounded-[4px] hairline" style="aspect-ratio: 4/3;" data-reveal>
+            <img src="./assets/images/interieur-arriere-cour.jpg"
+                 alt="Salle intérieure chaleureuse du restaurant"
+                 class="w-full h-full object-cover gallery-img" loading="lazy"/>
+          </figure>
+
+          <figure class="gallery-item relative overflow-hidden rounded-[4px] hairline" style="aspect-ratio: 3/4;" data-reveal>
+            <img src="./assets/images/premiere-image-arriere-cour.jpg"
+                 alt="Façade et entrée discrète de L'Arrière Cour"
+                 class="w-full h-full object-cover gallery-img" loading="lazy"/>
+          </figure>
+
+          <figure class="gallery-item relative overflow-hidden rounded-[4px] hairline" style="aspect-ratio: 1/1;" data-reveal>
+            <img src="./assets/images/plats-arriere-cour-1.jpg"
+                 alt="Détail d'un plat corse maison"
+                 class="w-full h-full object-cover gallery-img" loading="lazy" style="object-position: 30% 40%;"/>
+          </figure>
+
+          <figure class="gallery-item relative overflow-hidden rounded-[4px] hairline" style="aspect-ratio: 4/3;" data-reveal>
+            <img src="./assets/images/terrasse-cour-tripadvisor.jpg"
+                 alt="Ambiance estivale de la cour au dîner"
+                 class="w-full h-full object-cover gallery-img" loading="lazy" style="object-position: 50% 70%;"/>
+          </figure>
+
+          <figure class="gallery-item relative overflow-hidden rounded-[4px] hairline" style="aspect-ratio: 3/4;" data-reveal>
+            <img src="./assets/images/repas-arriere-cour.jpg"
+                 alt="Dégustation, plats partagés autour de la table"
+                 class="w-full h-full object-cover gallery-img" loading="lazy" style="object-position: 60% 30%;"/>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROOF -->
+    <section id="proof" class="py-20 sm:py-28 bg-ink text-bg">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+
+        <p class="eyebrow" style="color: rgba(246,239,226,0.75);" data-reveal>Note Google</p>
+
+        <div class="mt-6 flex items-baseline justify-center gap-3" data-reveal>
+          <strong class="proof-number">4,4</strong>
+          <span class="font-display text-3xl sm:text-4xl opacity-80">/ 5</span>
+        </div>
+
+        <p class="mt-2 text-[0.95rem]" style="color: rgba(246,239,226,0.75);" data-reveal>
+          sur <strong class="font-semibold" style="color: #F6EFE2;">1 368 avis</strong> Google
+        </p>
+
+        <div class="mt-12 grid md:grid-cols-2 gap-8 md:gap-10 text-left">
+
+          <blockquote class="md:pr-6 md:border-r md:border-bg/20" data-reveal>
+            <p class="font-display italic text-xl leading-relaxed">
+              « Une jolie cour ombragée, décor atypique plein de charme et d'authenticité, cuisine copieuse et savoureuse. »
+            </p>
+            <footer class="mt-4 text-xs tracking-[0.18em] uppercase" style="color: rgba(246,239,226,0.65);">Petit Futé</footer>
+          </blockquote>
+
+          <blockquote class="md:pl-4" data-reveal>
+            <p class="font-display italic text-xl leading-relaxed">
+              « Restaurant atypique, un magnifique platane au-dessus, un jardin caché en plein cœur de Saint-Florent. »
+            </p>
+            <footer class="mt-4 text-xs tracking-[0.18em] uppercase" style="color: rgba(246,239,226,0.65);">TripAdvisor (traduit)</footer>
+          </blockquote>
+
+        </div>
+
+        <div class="mt-14" data-reveal>
+          <a href="tel:+33495353362" class="btn-primary inline-flex items-center gap-2 px-6 py-3.5 rounded-[4px] font-medium">
+            Réserver au 04 95 35 33 62
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INFOS -->
+    <section id="infos" class="py-20 sm:py-28">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+        <div class="max-w-3xl mb-14">
+          <p class="eyebrow" data-reveal>Informations pratiques</p>
+          <h2 class="h2 mt-4" data-reveal>Nous trouver, <span class="italic">nous rejoindre</span>.</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+
+          <div class="space-y-10">
+
+            <div data-reveal>
+              <h3 class="h3">Horaires</h3>
+              <div class="mt-4 rule"></div>
+              <dl class="mt-5 divide-y divide-line/20">
+                <div class="flex items-baseline justify-between py-3">
+                  <dt class="text-ink">Lundi au dimanche</dt>
+                  <dd class="text-ink-2 tabular-nums">12h00 à 15h00</dd>
+                </div>
+                <div class="flex items-baseline justify-between py-3">
+                  <dt class="text-ink">Lundi au dimanche</dt>
+                  <dd class="text-ink-2 tabular-nums">19h00 à 21h30</dd>
+                </div>
+              </dl>
+              <p class="mt-4 text-sm text-ink-2">Ouvert 7j/7 d'avril à octobre.</p>
+            </div>
+
+            <div data-reveal>
+              <h3 class="h3">Adresse</h3>
+              <div class="mt-4 rule"></div>
+              <address class="mt-5 not-italic text-ink-2">
+                Place Doria, vieille ville<br/>
+                20217 Saint-Florent<br/>
+                Haute-Corse
+              </address>
+            </div>
+
+            <div data-reveal>
+              <h3 class="h3">Réservation</h3>
+              <div class="mt-4 rule"></div>
+              <div class="mt-5 flex flex-col sm:flex-row gap-3">
+                <a href="tel:+33495353362" class="btn-primary inline-flex items-center gap-2 px-6 py-3.5 rounded-[4px] font-medium">
+                  04 95 35 33 62
+                </a>
+                <a href="https://maps.google.com/?q=42.6809521,9.3004186" target="_blank" rel="noopener" class="btn-ghost inline-flex items-center gap-2 px-6 py-3.5 rounded-[4px] font-medium">
+                  Itinéraire
+                </a>
+              </div>
+              <p class="mt-4 text-sm text-ink-2">Un appel suffit : l'équipe décroche, note votre table, on vous attend sous le platane.</p>
+            </div>
+
+          </div>
+
+          <div data-reveal>
+            <div class="relative overflow-hidden rounded-[4px] hairline" style="aspect-ratio: 4/3;">
+              <iframe
+                src="https://maps.google.com/maps?q=42.6809521,9.3004186&z=15&output=embed"
+                style="border:0;border-radius:4px"
+                width="100%" height="100%"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Carte : L'Arrière Cour, Place Doria, Saint-Florent"></iframe>
+            </div>
+            <p class="mt-3 text-xs text-ink-2 italic">À quelques pas du port, dans la vieille ville.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink text-bg pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+      <div class="grid lg:grid-cols-[1.4fr_1fr] gap-10 items-end">
+
+        <div>
+          <p class="footer-mark">L'Arrière Cour</p>
+          <p class="mt-4 text-sm max-w-md" style="color: rgba(246,239,226,0.7);">
+            Restaurant corse, cour cachée de la vieille ville de Saint-Florent. Cuisine maison, accueil chaleureux, platane centenaire en prime.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-8 text-sm">
+          <div>
+            <p class="eyebrow" style="color: rgba(246,239,226,0.55);">Contact</p>
+            <ul class="mt-3 space-y-1.5" style="color: rgba(246,239,226,0.85);">
+              <li><a href="tel:+33495353362" class="hover:text-accent transition-colors">04 95 35 33 62</a></li>
+              <li>Place Doria</li>
+              <li>20217 Saint-Florent</li>
+            </ul>
+          </div>
+          <div>
+            <p class="eyebrow" style="color: rgba(246,239,226,0.55);">Accès</p>
+            <ul class="mt-3 space-y-1.5" style="color: rgba(246,239,226,0.85);">
+              <li><a href="#histoire" class="hover:text-accent transition-colors">La cour</a></li>
+              <li><a href="#signature" class="hover:text-accent transition-colors">La carte</a></li>
+              <li><a href="#galerie" class="hover:text-accent transition-colors">Galerie</a></li>
+              <li><a href="#infos" class="hover:text-accent transition-colors">Infos</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-16 pt-6 border-t border-bg/10 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between text-xs" style="color: rgba(246,239,226,0.6);">
+        <p>© <span id="year">2026</span> L'Arrière Cour, Saint-Florent. Tous droits réservés.</p>
+        <p>Site réalisé avec soin par Menghi Computer Science.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script type="module">
+    import { animate, inView, scroll, stagger } from 'https://cdn.jsdelivr.net/npm/motion@10.18.0/+esm';
+    import Lenis from 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/+esm';
+
+    // Smooth scroll
+    const lenis = new Lenis({
+      duration: 1.1,
+      easing: (t) => 1 - Math.pow(1 - t, 3),
+      smoothWheel: true,
+    });
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+
+    // Anchor links via Lenis
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        if (id && id.length > 1) {
+          const target = document.querySelector(id);
+          if (target) { e.preventDefault(); lenis.scrollTo(target, { offset: -72 }); }
+        }
+      });
+    });
+
+    // Reveal on view
+    inView('[data-reveal]', (el) => {
+      animate(el,
+        { opacity: [0, 1], transform: ['translateY(24px)', 'translateY(0)'] },
+        { duration: 0.9, easing: [0.2, 0.7, 0.2, 1] }
+      );
+    }, { margin: '0px 0px -10% 0px' });
+
+    // Signature cards stagger
+    inView('#signature .card-signature', (el) => {
+      const cards = Array.from(document.querySelectorAll('#signature .card-signature'));
+      const i = cards.indexOf(el);
+      animate(el,
+        { opacity: [0, 1], transform: ['translateY(24px)', 'translateY(0)'] },
+        { duration: 0.9, delay: i * 0.08, easing: [0.2, 0.7, 0.2, 1] }
+      );
+    });
+
+    // Gallery stagger
+    inView('#galerie .gallery-item', (el) => {
+      const items = Array.from(document.querySelectorAll('#galerie .gallery-item'));
+      const i = items.indexOf(el);
+      animate(el,
+        { opacity: [0, 1], transform: ['translateY(24px)', 'translateY(0)'] },
+        { duration: 0.9, delay: i * 0.08, easing: [0.2, 0.7, 0.2, 1] }
+      );
+    });
+
+    // Hero parallax (subtle 8%)
+    const heroImg = document.querySelector('#hero-image');
+    const heroSection = document.querySelector('#hero');
+    if (heroImg && heroSection) {
+      scroll(
+        animate(heroImg, { transform: ['translateY(0%)', 'translateY(-8%)'] }, { easing: 'linear' }),
+        { target: heroSection, offset: ['start end', 'end start'] }
+      );
+    }
+
+    // Histoire clip-path reveal
+    const histoireImg = document.querySelector('#histoire-image');
+    if (histoireImg) {
+      inView(histoireImg, () => {
+        histoireImg.classList.add('is-visible');
+      }, { margin: '0px 0px -15% 0px' });
+    }
+
+    // Year
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
